@@ -157,7 +157,7 @@ sudo systemctl start clamav-daemon.service
 sudo freshclam --show-progress
 
 # scan for a first time
-sudo clamscan /
+sudo clamscan --recursive /
 ```
 
 <details>
