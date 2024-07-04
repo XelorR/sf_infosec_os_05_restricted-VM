@@ -100,6 +100,7 @@ sudo vi /etc/pam.d/common-password
 ### ДОПОЛНИТЕЛЬНАЯ ИНФОРМАЦИЯ:
 
 - По пункту 1 предоставьте всё содержимое конфигурационного файла sshd и содержимое файла [authorized_keys](./assets/authorized_keys).
+  - [ ] create some additional key which I can share, connect from this key (from another VM?)
 - По пункту 2 предоставьте вывод команды ls в директории home, вывод файла passwd, содержимое файла sudoers.
 - По пункту 3 самостоятельно найдите информацию по установке минимального пароля. В качестве ответа предоставьте содержимое файла common-passwords.
 - По пункту 4 предоставьте результат успешной установки Java (последняя доступная версия JRE).
