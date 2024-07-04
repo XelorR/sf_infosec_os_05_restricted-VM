@@ -55,7 +55,12 @@ sudo systemctl restart sshd
 ssh -p 9922 petr@localhost
 ```
 
+<details>
+<summary>Screenshot -- SSH connection successful</summary>
+
 ![](./assets/1_ssh-connected.png)
+
+</details>
 
 2. Создать нового пользователя с домашней директорией и выдать ему возможность запускать следующие утилиты без требования пароля:
 
