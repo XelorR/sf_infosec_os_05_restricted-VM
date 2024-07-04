@@ -182,7 +182,7 @@ sudo clamscan --recursive /
 
 ![scan start](./assets/15-clamscan-start.png)
 
-![scan results]()
+![scan results](./assets/16-clamav-scan-results.png)
 
 </details>
 
