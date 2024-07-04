@@ -42,16 +42,16 @@ ssh-copy-id -p 9922 petr@localhost
 sudo vi /etc/ssh/sshd_config
 ```
 
-```bash
-# from host machine
-ssh -p 9922 petr@localhost
-```
-
 ![](./assets/6-pw-auth-ssh-no.png)
 
 ```bash
 # from VM
 sudo systemctl restart sshd
+```
+
+```bash
+# from host machine
+ssh -p 9922 petr@localhost
 ```
 
 ![](./assets/1_ssh-connected.png)
