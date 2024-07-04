@@ -11,6 +11,7 @@ Homework for infosec courses
 qemu-img create -f qcow2 jammy.qcow2 40G
 
 # running installation from ubuntu 22.04 iso
+# press ESC on boot to enter bios and select boot order, if feel it necessary
 qemu-system-x86_64 -enable-kvm -smp 2 -m 3G -bios /usr/share/edk2/ovmf/OVMF_CODE.fd -drive file=jammy.qcow2,format=qcow2,index=1,media=disk -drive file=/home/user/Downloads/ubuntu-22.04.4-live-server-amd64.iso,format=raw,index=0,media=cdrom
 
 # running installed VM
