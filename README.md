@@ -69,7 +69,10 @@ sudo useradd -m user5
 
 ![](./assets/2_creating-user-with-folder.png)
 
+<details>
+<summary>Some fixes for new user</summary>
 ![](./assets/3_user-initial-setup.png)
+</details>
 
 ![](./assets/4_editing-passwd.png)
 
