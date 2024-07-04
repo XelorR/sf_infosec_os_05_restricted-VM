@@ -132,11 +132,49 @@ sudo apt install -y openjdk-21-jre
 5. Настроить автоматическое сканирование антивирусом всей ОС каждый понедельник в 4 утра. При этом раз в месяц должно происходить обновление базы данных антивирусов.
 
 ```bash
-# on VM
+# install
 CLAMAV_VERSION=$(curl -s "https://api.github.com/repos/Cisco-Talos/clamav/releases/latest" | grep tag_name | cut -d'"' -f4)
 wget "https://github.com/Cisco-Talos/clamav/releases/latest/download/$CLAMAV_VERSION.linux.x86_64.deb"
 sudo apt install -y ./$CLAMAV_VERSION.linux.x86_64.deb
+sudo apt install -y clamav-daemon
+
+# stop daemons
+sudo systemctl stop clamav-freshclam
+sudo systemctl disable clamav-freshclam
+sudo systemctl stop clamav-daemon.service
+
+# ensure default config
+sudo rm -f /usr/local/etc/freshclam.conf
+sudo rm -f /usr/local/etc/clamd.conf
+sudo ln -s /etc/clamav/freshclam.conf /usr/local/etc/freshclam.conf
+sudo ln -s /etc/clamav/clamd.conf /usr/local/etc/clamd.conf
+sudo rm /var/log/clamav/freshclam.log
+
+# turn it on back
+sudo systemctl start clamav-daemon.service
+
+# update for a first time
+sudo freshclam --show-progress
+
+# scan for a first time
+sudo clamscan /
 ```
+
+<details>
+<summary>ClamAV update successful -- screenshot</summary>
+
+![](./assets/14-clamav-updated-latest.png)
+
+</details>
+
+<details>
+<summary>ClamAV scan results -- screenshot</summary>
+
+![scan start](./assets/15-clamscan-start.png)
+
+![scan results]()
+
+</details>
 
 6. Настроить файервол на блокирование всего входящего и выходящего трафика.
 
