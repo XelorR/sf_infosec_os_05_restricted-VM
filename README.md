@@ -136,6 +136,9 @@ sudo apt install -y openjdk-21-jre
 
 5. Настроить автоматическое сканирование антивирусом всей ОС каждый понедельник в 4 утра. При этом раз в месяц должно происходить обновление базы данных антивирусов.
 
+<details>
+<summary>ClamAV install, update and first scan -- code</summary>
+
 ```bash
 # install
 CLAMAV_VERSION=$(curl -s "https://api.github.com/repos/Cisco-Talos/clamav/releases/latest" | grep tag_name | cut -d'"' -f4)
@@ -164,6 +167,8 @@ sudo freshclam --show-progress
 # scan for a first time
 sudo clamscan --recursive /
 ```
+
+</details>
 
 <details>
 <summary>ClamAV update successful -- screenshot</summary>
