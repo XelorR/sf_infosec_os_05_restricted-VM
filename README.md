@@ -121,6 +121,14 @@ sudo vi /etc/pam.d/common-password
 
 4. Установить на сервер пакеты Java.
 5. Настроить автоматическое сканирование антивирусом всей ОС каждый понедельник в 4 утра. При этом раз в месяц должно происходить обновление базы данных антивирусов.
+
+```bash
+# on VM
+CLAMAV_VERSION=$(curl -s "https://api.github.com/repos/Cisco-Talos/clamav/releases/latest" | grep tag_name | cut -d'"' -f4)
+wget "https://github.com/Cisco-Talos/clamav/releases/latest/download/$CLAMAV_VERSION.linux.x86_64.deb"
+sudo apt install -y ./$CLAMAV_VERSION.linux.x86_64.deb
+```
+
 6. Настроить файервол на блокирование всего входящего и выходящего трафика.
 
 ### УСЛОВИЯ РЕАЛИЗАЦИИ:
