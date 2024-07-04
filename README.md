@@ -98,6 +98,8 @@ systemctl list-unit-files | grep apparmor
 
 </details>
 
+Allowing to run some binaries without password:
+
 ```bash
 # in VM
 sudo vi /etc/sudoers
