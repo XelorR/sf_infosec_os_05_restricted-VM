@@ -75,6 +75,14 @@ sudo useradd -m user5
 
 ![](./assets/5-user-login-bash.png)
 
+```bash
+# in VM
+# check if AppArmor is enabled
+systemctl list-unit-files | grep apparmor
+```
+
+![](./assets/9-check-apparmor-enabled.png)
+
 3. Установить минимальную длину пароля для пользователя в 8 символов.
 
 ```bash
