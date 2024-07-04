@@ -125,7 +125,12 @@ sudo vi /etc/pam.d/common-password
 sudo apt install -y openjdk-21-jre
 ```
 
+<details>
+<summary>Figuring out the latest available version</summary>
+
 ![](./assets/12-install-jre-latest.png)
+
+</details>
 
 ![](./assets/13-java-version.png)
 
