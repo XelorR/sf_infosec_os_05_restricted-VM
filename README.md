@@ -122,8 +122,12 @@ sudo vi /etc/pam.d/common-password
 4. Установить на сервер пакеты Java.
 
 ```bash
-sudo apt install -y openjdk-17-jdk
+sudo apt install -y openjdk-21-jre
 ```
+
+![](./assets/12-install-jre-latest.png)
+
+![](./assets/13-java-version.png)
 
 5. Настроить автоматическое сканирование антивирусом всей ОС каждый понедельник в 4 утра. При этом раз в месяц должно происходить обновление базы данных антивирусов.
 
