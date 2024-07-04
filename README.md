@@ -187,6 +187,26 @@ sudo clamscan --recursive /
 
 </details>
 
+```bash
+sudo mkdir -p /var/log/clamav
+# create cron jobs
+if ! sudo crontab -l | grep -q '0 4 \* \* 1 /usr/local/bin/clamscan -i --recursive / >> /var/log/clamav/daily_antivirus.log'; then
+	sudo crontab -l | {
+		cat
+		echo '0 4 * * 1 /usr/local/bin/clamscan -i --recursive / >> /var/log/clamav/daily_antivirus.log'
+	} | sudo crontab -
+fi
+
+if ! sudo crontab -l | grep -q '0 0 1 \* \* /usr/local/bin/freshclam'; then
+	sudo crontab -l | {
+		cat
+		echo '0 0 1 * * /usr/local/bin/freshclam'
+	} | sudo crontab -
+fi
+```
+
+![](./assets/17-clamav-cronjobs.png)
+
 6. Настроить файервол на блокирование всего входящего и выходящего трафика.
 
 ### УСЛОВИЯ РЕАЛИЗАЦИИ:
