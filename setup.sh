@@ -6,7 +6,7 @@ sudo apt update
 sudo apt install -y sshd
 
 if [ ! -f $HOME/.ssh/id_ed25519.pub ]; then
-	ssh-keygen -t ed25519
+  ssh-keygen -t ed25519 -N ''
 fi
 
 sudo cat <<EOF >/etc/ssh/ssh_config
