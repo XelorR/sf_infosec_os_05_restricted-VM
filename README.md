@@ -70,13 +70,18 @@ sudo useradd -m user5
 ![](./assets/2_creating-user-with-folder.png)
 
 <details>
-<summary>Some fixes for new user</summary>
+<summary>Some fixes for new user - making bash the default shell</summary>
+
 ![](./assets/3_user-initial-setup.png)
-</details>
 
 ![](./assets/4_editing-passwd.png)
 
 ![](./assets/5-user-login-bash.png)
+
+</details>
+
+<details>
+<summary>Some fixes for new user - making bash the default shell</summary>
 
 ```bash
 # in VM
@@ -85,6 +90,8 @@ systemctl list-unit-files | grep apparmor
 ```
 
 ![](./assets/9-check-apparmor-enabled.png)
+
+</details>
 
 ```bash
 # in VM
