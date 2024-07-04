@@ -26,6 +26,14 @@ fi
 - usr/bin/systemctl
 - sbin/ifup, /sbin/ifdown
 
+![](./assets/2_creating-user-with-folder.png)
+
+![](./assets/3_user-initial-setup.png)
+
+![](./assets/4_editing-passwd.png)
+
+![](./assets/5-user-login-bash.png)
+
 3. Установить минимальную длину пароля для пользователя в 8 символов.
 4. Установить на сервер пакеты Java.
 5. Настроить автоматическое сканирование антивирусом всей ОС каждый понедельник в 4 утра. При этом раз в месяц должно происходить обновление базы данных антивирусов.
