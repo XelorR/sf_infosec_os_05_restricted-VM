@@ -11,13 +11,31 @@ Homework for infosec courses
 1. Установить SSH-сервер и настроить удалённое подключение по ключам, вместо пароля.
 
 ```bash
+# from VM
+
 sudo apt update
 sudo apt install -y sshd
 
 if [ ! -f $HOME/.ssh/id_ed25519.pub ]; then
 	ssh-keygen -t ed25519
 fi
+
+sudo vi /etc/ssh/sshd_config
 ```
+
+![](./assets/6-pw-auth-ssh-no.png)
+
+```bash
+# from host machine
+ssh-copy-id -p 9922 petr@localhost
+```
+
+```bash
+# from VM
+
+sudo systemctl restart ssh
+```
+
 ![](./assets/1_ssh-connected.png)
 
 2. Создать нового пользователя с домашней директорией и выдать ему возможность запускать следующие утилиты без требования пароля:
