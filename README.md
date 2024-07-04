@@ -81,7 +81,7 @@ sudo useradd -m user5
 </details>
 
 <details>
-<summary>Some fixes for new user - making bash the default shell</summary>
+<summary>Checking if AppArmor enabled</summary>
 
 ```bash
 # in VM
