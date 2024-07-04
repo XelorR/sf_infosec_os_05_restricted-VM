@@ -62,6 +62,10 @@ ssh -p 9922 petr@localhost
 - usr/bin/systemctl
 - sbin/ifup, /sbin/ifdown
 
+```bash
+sudo useradd -m user5
+```
+
 ![](./assets/2_creating-user-with-folder.png)
 
 ![](./assets/3_user-initial-setup.png)
