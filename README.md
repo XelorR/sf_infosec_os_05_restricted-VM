@@ -83,6 +83,15 @@ systemctl list-unit-files | grep apparmor
 
 ![](./assets/9-check-apparmor-enabled.png)
 
+```bash
+# in VM
+sudo vi /etc/sudoers
+```
+
+![](./assets/10-sudoers-change.png)
+
+![](./assets/11-sudoers-effect.png)
+
 3. Установить минимальную длину пароля для пользователя в 8 символов.
 
 ```bash
