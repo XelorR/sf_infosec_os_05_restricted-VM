@@ -30,11 +30,7 @@ sudo apt install -y sshd
 if [ ! -f $HOME/.ssh/id_ed25519.pub ]; then
 	ssh-keygen -t ed25519
 fi
-
-sudo vi /etc/ssh/sshd_config
 ```
-
-![](./assets/6-pw-auth-ssh-no.png)
 
 ```bash
 # from host machine
@@ -43,7 +39,13 @@ ssh-copy-id -p 9922 petr@localhost
 
 ```bash
 # from VM
+sudo vi /etc/ssh/sshd_config
+```
 
+![](./assets/6-pw-auth-ssh-no.png)
+
+```bash
+# from VM
 sudo systemctl restart sshd
 ```
 
