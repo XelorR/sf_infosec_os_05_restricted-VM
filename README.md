@@ -33,7 +33,7 @@ ssh-copy-id -p 9922 petr@localhost
 ```bash
 # from VM
 
-sudo systemctl restart ssh
+sudo systemctl restart sshd
 ```
 
 ![](./assets/1_ssh-connected.png)
