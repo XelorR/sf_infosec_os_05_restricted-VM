@@ -216,7 +216,7 @@ fi
 
 6. Настроить файервол на блокирование всего входящего и выходящего трафика.
 
-![](./assets/19-iptables-accepted.png)
+![](./assets/19-iptables-accepted.png "Initial policy")
 
 ```bash
 # clean all rules, if any
@@ -228,11 +228,11 @@ sudo iptables -P FORWARD DROP
 sudo iptables -P OUTPUT DROP
 ```
 
-![](./assets/20-iptables-drop-policy.png)
+![](./assets/20-iptables-drop-policy.png "Policy changed")
 
-![](./assets/21-iptables-nothing-happens-on-ssh-connection-try.png)
+![](./assets/21-iptables-nothing-happens-on-ssh-connection-try.png "SSH trying to connect without any effect, assume that incoming connections failing now")
 
-![](./assets/24-outgoing-fail.png)
+![](./assets/24-outgoing-fail.png "Ping to external resource failing")
 
 <details>
 <summary>Reverting iptables back</summary>
@@ -243,11 +243,11 @@ sudo iptables -P FORWARD ACCEPT
 sudo iptables -P OUTPUT ACCEPT
 ```
 
-![](./assets/22-iptables-enabling-it-back)
+![](./assets/22-iptables-enabling-it-back "Enabling it back")
 
-![](./assets/23-ssh-is-back.png)
+![](./assets/23-ssh-is-back.png "Incoming works fine")
 
-![](./assets/25.ping-is-back.png)
+![](./assets/25.ping-is-back.png "Outgoing works fine")
 
 </details>
 
