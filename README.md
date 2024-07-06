@@ -262,7 +262,7 @@ sudo iptables -P OUTPUT ACCEPT
 ### ДОПОЛНИТЕЛЬНАЯ ИНФОРМАЦИЯ:
 
 - По пункту 1 предоставьте всё содержимое конфигурационного [файла sshd](./assets/sshd_config) и содержимое файла [authorized_keys](./assets/authorized_keys.png).
-- По пункту 2 предоставьте [вывод команды ls в директории home](./assets/26-ls-and-passwd.png), вывод файла [passwd](./assets/passwd), содержимое файла [sudoers](./assets/sudoers).
+- По пункту 2 предоставьте [вывод команды ls в директории home](./assets/26-ls-and-passwd.png), ([+ 1 screenshot](./assets/2_creating-user-with-folder.png)), вывод файла [passwd](./assets/passwd), содержимое файла [sudoers](./assets/sudoers).
 - По пункту 3 самостоятельно найдите информацию по установке минимального пароля. В качестве ответа предоставьте содержимое файла [common-passwords](./assets/common-password).
 - По пункту 4 предоставьте [результат успешной установки Java](./assets/13-java-version.png) ([последняя доступная версия JRE](./assets/12-install-jre-latest.png)).
 - По пункту 5 предоставьте [тексты задач cron, содержимое файла crontab](./assets/17-clamav-cronjobs.png) (скрипт Bash — пожеланию)
