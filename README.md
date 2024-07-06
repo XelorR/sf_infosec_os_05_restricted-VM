@@ -216,6 +216,41 @@ fi
 
 6. Настроить файервол на блокирование всего входящего и выходящего трафика.
 
+![](./assets/19-iptables-accepted.png)
+
+```bash
+# clean all rules, if any
+sudo iptables -F
+
+# setting to drop all incoming and outgoing, including forwarding
+sudo iptables -P INPUT DROP
+sudo iptables -P FORWARD DROP
+sudo iptables -P OUTPUT DROP
+```
+
+![](./assets/20-iptables-drop-policy.png)
+
+![](./assets/21-iptables-nothing-happens-on-ssh-connection-try.png)
+
+![](./assets/24-outgoing-fail.png)
+
+<details>
+<summary>Reverting iptables back</summary>
+
+```bash
+sudo iptables -P INPUT ACCEPT
+sudo iptables -P FORWARD ACCEPT
+sudo iptables -P OUTPUT ACCEPT
+```
+
+![](./assets/22-iptables-enabling-it-back)
+
+![](./assets/23-ssh-is-back.png)
+
+![](./assets/25.ping-is-back.png)
+
+</details>
+
 ### УСЛОВИЯ РЕАЛИЗАЦИИ:
 
 По каждому пункту нужно предоставить:
