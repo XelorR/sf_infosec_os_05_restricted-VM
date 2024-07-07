@@ -56,6 +56,8 @@ sudo systemctl restart sshd
 ssh -p 9922 petr@localhost
 ```
 
+![](./assets/Screencast_20240707_080634.gif)
+
 <details>
 <summary>Screenshot -- SSH connection successful</summary>
 
